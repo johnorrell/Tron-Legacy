@@ -32,3 +32,87 @@ svg * {
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
+
+:root {
+   --input-hover-border-color: red;
+}
+
+.theme-dark {
+  --window-border: 1px solid var(--window-border-color); /* Thanks Damian K from the Prism theme! */
+  --window-border-color: var(--background-secondary-alt);
+  color-scheme: dark;
+  /* JLO --background-primary: #2f3136; */
+  --background-primary: #141414;
+  --background-primary-alt: #36393f;
+  --background-secondary: #141414;
+  --background-secondary-alt: #222222;
+  --text-normal: #abebf4; /* JLO - Terminal text at Flynn's console */
+  --text-faint: #999999;
+  --text-muted: #aaaaaa;
+  --text-selection: #164f92;
+  --text-on-accent: #5dbcd2;
+  --text-accent: #319cb4;
+  --text-error: rgb(244, 105, 188);
+  --bold-color: rgb(158, 138, 255);
+  --bold-weight: 700;
+  --italic-color: rgb(158, 138, 255); /* JLO */
+  --h1-color: rgba(171, 235, 244, 1.00); /* JLO - Terminal text at Flynn's console */
+  --h2-color: rgba(171, 235, 244, 0.95); /* JLO */
+  --h3-color: rgba(171, 235, 244, 0.90); /* JLO */
+  --h4-color: rgba(171, 235, 244, 0.85); /* JLO */
+  --h5-color: rgba(171, 235, 244, 0.80); /* JLO */
+  --h6-color: rgba(171, 235, 244, 0.75); /* JLO */
+  --inline-title-color: rgb(93, 188, 210); /* JLO */
+  --link-color: rgb(35, 207, 253); /* JLO - Flynn's dinner drink (blue) */
+  --link-external-color: rgb(143, 226, 242); /* JLO - Portal */
+  /* --link-external-color: rgb(222, 227, 241); */ /* JLO - Flynn's console purple */
+  --link-external-color-hover: rgb(116, 220, 188); /* JLO - Zeus' End of Line drink*/
+  --link-external-decoration: underline;
+  --link-external-decoration-hover: underline;
+  --text-mark: transparent; /* SEE HIGHLIGHTER */
+  /* pre-code referenced in cm-inline-code */
+  --pre-code: rgb(64, 68, 77);
+  --code-size: 13.125px;
+  --code-background: rgb(54, 57, 63);
+  --code-normal: rgb(170, 170, 170);
+  --code-tag: rgb(49, 156, 180);
+  --code-punctuation: rgb(49, 156, 180);
+  --text-highlight-bg: rgba(252, 246, 1, 0.4); /* SEE HIGHLIGHTER */
+  --interactive-accent: rgba(252, 246, 1, 0.95);
+  --interactive-accent-muted: rgba(252, 246, 1, 0.55);
+  --interactive-accent-hover: #9e8aff; /* for Calendar Plugin*/
+  --interactive-before: #5e6565;
+  --interactive-hover: #36393f; /* for Calendar Plugin*/
+  --background-modifier-border: #595959; /*595959*/
+  /* Matching blockquote border to screenshot rather than code */
+  --blockquote-border-color: rgb(130, 114, 208);
+  --blockquote-border-thickness: 2px;
+  --blockquote-color: rgb(93, 188, 210);
+  --interactive-accent: #999999; /* JLO */
+  --font-text-theme: Avenir, Avenir Next, var(--default-font), sans-serif;
+  --font-editor-theme: Avenir, Avenir Next, var(--default-font), sans-serif;
+  /* Usage of preferred monospace font */
+  /* --font-monospace-theme: Menlo, SFMono-Regular, Consolas, "JetBrains Mono",
+    "Fira Coda", SFMono-Regular, "Roboto Mono", "Source Code Pro", monospace; */
+  --font-monospace-theme: "JetBrains Mono", Menlo, SFMono-Regular, Consolas,
+    "Fira Coda", SFMono-Regular, "Roboto Mono", "Source Code Pro", monospace;
+  --scrollbar-bg: rgba(20, 20, 20, 0);
+  --scrollbar-thumb-bg: #595959;
+  --background-modifier-error: #36393f;
+  --background-modifier-success: #36393f;
+  --background-modifier-form-field: #2f3136;
+  --background-modifier-form-field-highlighted: #2f3136;
+  --graph-text: rgb(88, 161, 176); /* JLO - Rolling credits */
+  --graph-node: rgb(42, 194, 138); /* JLO - End credits nodes */
+  --graph-node-focused: rgb(42, 194, 138); /* JLO - End credits nodes */
+  --graph-node-unresolved: rgb(42, 194, 138); /* JLO - End credits nodes */
+  --graph-node-attachment: rgb(42, 194, 138); /* JLO - End credits nodes */
+  --graph-node-tag: rgb(88, 161, 176); /* JLO - Rolling credits */
+  --graph-line: rgb(38, 121, 140); /* JLO - End credits circuit lines */
+  --table-background: var(--background-secondary-alt);
+  --table-header-weight: 800;
+  --hr-color: var(--text-normal);
+  --ribbon-background: rgb(20, 20, 20);
+  --ribbon-background-collapsed: rgb(200, 200, 200);
+  --tag-color: rgb(252, 246, 1);
+}
