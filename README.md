@@ -2,6 +2,8 @@ This is a sample theme for Obsidian ([https://obsidian.md](https://obsidian.md/)
 
 ## First Time publishing a theme?
 
+YES! I have updated the colors for Tron Legacy.
+
 ### Quick start
 
 <img width="244" alt="Pasted image 20220822135601" src="https://user-images.githubusercontent.com/693981/186000386-4f4da987-fcaf-4aa5-aed4-e34b5901255d.png">
