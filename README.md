@@ -4,6 +4,8 @@ This is the Tron Legacy for Obsidian ([https://obsidian.md](https://obsidian.md/
 
 YES! I have updated the colors for Tron Legacy.
 
+Both dark and light themes are based on elements surrounding Sam or Kevin Flynn.
+
 ### Quick start
 
 <img width="244" alt="Pasted image 20220822135601" src="https://user-images.githubusercontent.com/693981/186000386-4f4da987-fcaf-4aa5-aed4-e34b5901255d.png">
