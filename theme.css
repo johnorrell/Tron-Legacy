@@ -18,17 +18,19 @@
 
 :root
 {
-	/* Define a set of standard, named colors. */
-	
-	--color-terminal-text:			#abebf4 ;	/* Terminal text at Flynn's console */
-	/* --color-terminal-text:			#a0f3ff ; */ /* Terminal text at Flynn's console, fully saturated */
-	/* --color-terminal-text-rgb:		171,235,244 ; */	/* Terminal text at Flynn's console */
-	--color-terminal-text-rgb:		160,243,255 ;	/* Terminal text at Flynn's console, fully saturated */
+	/* Define a set of standard, named colors */
+
+	/* Thank you to https://pickcoloronline.com/ to help grab colors */
 
 	--color-terminal-background:		#030505 ;	/* Flynn's clean console 'on the grid' */
 	--color-terminal-background-dusty:	#0e0e07 ;	/* Flynn's dusty console */
 
 	--color-clu-helmet-game-grid:		#050505 ;	/* Clu's helmet talking to Sam before light-cycle battle */
+	
+	--color-terminal-text:			#abebf4 ;	/* Terminal text at Flynn's console */
+	--color-terminal-text-sat:		#a0f3ff ;	/* Terminal text at Flynn's console, fully saturated */
+	--color-terminal-text-rgb:		171,235,244 ;	/* Terminal text at Flynn's console */
+	--color-terminal-text-rgb-sat:		160,243,255 ;	/* Terminal text at Flynn's console, fully saturated */
 
 }
 
@@ -97,22 +99,24 @@ body
   --bold-weight: 700;
   --italic-color: rgb(158, 138, 255); /* JLO */
 
-
-  --h1-color: rgba(var(--color-terminal-text-rgb), 1.00); /* JLO - Terminal text at Flynn's console */
-  --h2-color: rgba(var(--color-terminal-text-rgb), 0.85); /* JLO */
-  --h3-color: rgba(var(--color-terminal-text-rgb), 0.70); /* JLO */
-  --h4-color: rgba(var(--color-terminal-text-rgb), 0.55); /* JLO */
-  --h5-color: rgba(var(--color-terminal-text-rgb), 0.40); /* JLO */
-  --h6-color: rgba(var(--color-terminal-text-rgb), 0.25); /* JLO */
-
 /* ───────────────────────────────────────────────────
-  --h1-color: rgb(161, 242, 254); /* JLO - Terminal text at Flynn's console */
-  --h2-color: rgb(163, 241, 252); /* JLO */
-  --h3-color: rgb(164, 240, 251); /* JLO */
-  --h4-color: rgb(166, 239, 249); /* JLO */
-  --h5-color: rgb(168, 237, 247); /* JLO */
-  --h6-color: rgb(169, 236, 246); /* JLO */
-   ─────────────────────────────────────────────────── */
+  --h1-color: rgba(var(--color-terminal-text-rgb-sat), 1.00);
+  --h2-color: rgba(var(--color-terminal-text-rgb-sat), 0.85);
+  --h3-color: rgba(var(--color-terminal-text-rgb-sat), 0.70);
+  --h4-color: rgba(var(--color-terminal-text-rgb-sat), 0.55);
+  --h5-color: rgba(var(--color-terminal-text-rgb-sat), 0.40);
+  --h6-color: rgba(var(--color-terminal-text-rgb-sat), 0.25);
+    ─────────────────────────────────────────────────── */
+
+
+/* Used https://mdigi.tools/saturate-color/#abebf4 to create these variations */
+  --h1-color: rgb(160, 243, 255); /* 100% */
+  --h2-color: rgb(162, 242, 253); /* 85% */
+  --h3-color: rgb(163, 241, 252); /* 70% */
+  --h4-color: rgb(165, 240, 250); /* 55% */
+  --h5-color: rgb(167, 238, 248); /* 40% */
+  --h6-color: rgb(168, 237, 247); /* 25% */
+
 
 
   --inline-title-color: rgb(93, 188, 210); /* JLO */
@@ -214,7 +218,7 @@ body
 
     --link-url:                      var(--purple);
 
-    --h1-color:                      var(--red);
+    --h1-color:                      var(--color-red);
     --h2-color:                      var(--yellow);
     --h3-color:                      var(--green);
     --h4-color:                      var(--purple);
@@ -233,7 +237,8 @@ body
 
     --titlebar-text-color-focused:   var(--red);
 
-    --inline-title-color:            var(--yellow);
+    /* --inline-title-color:            var(--yellow); */
+    --inline-title-color: #17394f;
 
     --bold-color:                    var(--green);
     --italic-color:                  var(--green);
