@@ -1,52 +1,80 @@
-body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
+/* ───────────────────────────────────────────────────
+	Tron Legcay
+	Version 0.01
+	Created by John L. Orrell
+
+	Readme:
+	https://github.com/johnorrell/obsidian-tron-legacy
+
+	Homepage:
+	https://www.johnorrell.net/
+   ─────────────────────────────────────────────────── */
+
+/* ───────────────────────────────────────────────────
+	Main Theme Styling
+   ─────────────────────────────────────────────────── */
+
+@charset "UTF-8";
+
+:root
+{
+	/* Define a set of standard, named colors. */
+	
+	--color-terminal-text:		#abebf4 ;	/* Terminal text at Flynn's console */
+	--color-terminal-text-rgb:	171,235,244 ;	/* Terminal text at Flynn's console */
+
+}
+
+body
+{
+	/* --radius-s:	4px; */ /* Leave as default */
+	/* --radius-m:	8px; */ /* Leave as default */
+	/* --radius-l:	12px; */ /* Leave as default */
+	/* --radius-xl:	16px; */ /* Leave as default */
 	--input-radius: 0px;
 	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
+	--checkbox-radius: 4px;
 	--toggle-radius: 0px;
 	--toggle-thumb-radius: 0px;
 	--slider-thumb-radius: 0px;
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
+.theme-dark.clu, .theme-dark .clu
+{
+	color-scheme: dark-clu;
+
+	--background-primary:		#050505; /* #030505 Flynn's clean console 'on the grid' */ */ /* #0e0e07; Console screen Flynn's */ /* flu helmet in ages #050505; */ /* onyx #141414 */
+	--background-primary-alt:	#36393f;
+	--background-secondary:		#050505;
+	--background-secondary-alt:	#222222;
+	--background-modifier-border:	#FF0000;
 }
 
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
-}
+.theme-dark
+{
+	color-scheme: dark;
 
-.menu {
-	padding: var(--size-2-1);
-}
+	--background-primary:		#050505; /* #030505 Flynn's clean console 'on the grid' */ */ /* #0e0e07; Console screen Flynn's */ /* flu helmet in ages #050505; */ /* onyx #141414 */
+	--background-primary-alt:	#36393f;
+	--background-secondary:		#050505;
+	--background-secondary-alt:	#222222;
+	--background-modifier-border:	#FF0000;
 
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
-}
+	/* --border-width		1px; */ /* Don't use this. */
 
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
-}
+	--divider-color:		rgb(231, 251, 249);
+	--divider-width:		1px;
+	--divider-color-hover:		rgba(231, 251, 249, 1.0);
+	--divider-width-hover:		2px;
+	/* --divider-vertical-height:	0px; */ /* Don't use this. */
 
-:root {
-   --input-hover-border-color: red;
-}
+    --titlebar-text-color-focused:   var(--red);
 
-.theme-dark {
   --window-border: 1px solid var(--window-border-color); /* Thanks Damian K from the Prism theme! */
   --window-border-color: var(--background-secondary-alt);
-  color-scheme: dark;
-  /* JLO --background-primary: #2f3136; */
-  --background-primary: #141414;
-  --background-primary-alt: #36393f;
-  --background-secondary: #141414;
-  --background-secondary-alt: #222222;
-  --text-normal: #abebf4; /* JLO - Terminal text at Flynn's console */
+
+  /* --text-normal: #abebf4; */ /* JLO - Terminal text at Flynn's console */
+  --text-normal: var(--color-terminal-text);
   --text-faint: #999999;
   --text-muted: #aaaaaa;
   --text-selection: #164f92;
@@ -56,12 +84,12 @@ svg * {
   --bold-color: rgb(158, 138, 255);
   --bold-weight: 700;
   --italic-color: rgb(158, 138, 255); /* JLO */
-  --h1-color: rgba(171, 235, 244, 1.00); /* JLO - Terminal text at Flynn's console */
-  --h2-color: rgba(171, 235, 244, 0.95); /* JLO */
-  --h3-color: rgba(171, 235, 244, 0.90); /* JLO */
-  --h4-color: rgba(171, 235, 244, 0.85); /* JLO */
-  --h5-color: rgba(171, 235, 244, 0.80); /* JLO */
-  --h6-color: rgba(171, 235, 244, 0.75); /* JLO */
+  --h1-color: rgba(var(--color-terminal-text-rgb), 1.00); /* JLO - Terminal text at Flynn's console */
+  --h2-color: rgba(var(--color-terminal-text-rgb), 0.95); /* JLO */
+  --h3-color: rgba(var(--color-terminal-text-rgb), 0.90); /* JLO */
+  --h4-color: rgba(var(--color-terminal-text-rgb), 0.85); /* JLO */
+  --h5-color: rgba(var(--color-terminal-text-rgb), 0.80); /* JLO */
+  --h6-color: rgba(var(--color-terminal-text-rgb), 0.75); /* JLO */
   --inline-title-color: rgb(93, 188, 210); /* JLO */
   --link-color: rgb(35, 207, 253); /* JLO - Flynn's dinner drink (blue) */
   --link-external-color: rgb(143, 226, 242); /* JLO - Portal */
@@ -102,13 +130,15 @@ svg * {
   --background-modifier-success: #36393f;
   --background-modifier-form-field: #2f3136;
   --background-modifier-form-field-highlighted: #2f3136;
-  --graph-text: rgb(88, 161, 176); /* JLO - Rolling credits */
-  --graph-node: rgb(42, 194, 138); /* JLO - End credits nodes */
-  --graph-node-focused: rgb(42, 194, 138); /* JLO - End credits nodes */
-  --graph-node-unresolved: rgb(42, 194, 138); /* JLO - End credits nodes */
-  --graph-node-attachment: rgb(42, 194, 138); /* JLO - End credits nodes */
-  --graph-node-tag: rgb(88, 161, 176); /* JLO - Rolling credits */
-  --graph-line: rgb(38, 121, 140); /* JLO - End credits circuit lines */
+
+  --graph-text:			rgb(88, 161, 176); /* JLO - Rolling credits */
+  --graph-line:			rgb(38, 121, 140); /* JLO - End credits circuit lines */
+  --graph-node:			rgb(42, 194, 138); /* JLO - End credits nodes */
+  --graph-node-unresolved:	rgb(42, 194, 138); /* JLO - End credits nodes */
+  --graph-node-focused:		rgb(242, 194, 138); /* JLO - End credits nodes */
+  --graph-node-tag:		rgb(88, 161, 176); /* JLO - Rolling credits */
+  --graph-node-attachment:	rgb(42, 194, 138); /* JLO - End credits nodes */
+
   --table-background: var(--background-secondary-alt);
   --table-header-weight: 800;
   --hr-color: var(--text-normal);
@@ -116,3 +146,215 @@ svg * {
   --ribbon-background-collapsed: rgb(200, 200, 200);
   --tag-color: rgb(252, 246, 1);
 }
+
+.theme-light
+{
+	color-scheme: light;
+
+    --color-red-rgb:                 var(--red_x);
+    --color-red:                     var(--red);
+    --color-purple-rgb:              var(--purple_x);
+    --color-purple:                  var(--purple);
+    --color-green-rgb:               var(--green_x);
+    --color-green:                   var(--green);
+    --color-cyan-rgb:                var(--frost1_x);
+    --color-cyan:                    var(--frost1);
+    --color-blue-rgb:                var(--frost3_x);
+    --color-blue:                    var(--frost3);
+    --color-yellow-rgb:              var(--yellow_x);
+    --color-yellow:                  var(--yellow);
+    --color-orange-rgb:              var(--orange_x);
+    --color-orange:                  var(--orange);
+    /* --color-pink:                    var(--purple); */
+
+    --background-primary:          #d3e4e9;
+    --background-primary-alt:       #c6e0e5;
+    --background-secondary:          #d3e4e9;
+    --background-secondary-alt:       #c6e0e5;
+    /* --background-secondary:            #dff5fb; */
+    /* --background-secondary-alt:        #cdecf6; */
+    /* --background-secondary:          #c2e7fd; */
+    /* --background-secondary-alt:      #96d3f1; */
+    /* --background-secondary:          #8eccea; */
+    /* --background-secondary-alt:      #6fadd1; */
+    /* --background-secondary:          #5f9dc9; */
+    /* --background-secondary-alt:      #3d6b8c; */
+    --background-modifier-border:    var(--light1);
+
+    --cursor-line-background:        rgba(var(--red_x), 0.1);
+
+    --text-normal:                   #01060f;
+    --text-faint:                    #1a374c;
+    --text-muted:                    #17394f;
+
+    --link-url:                      var(--purple);
+
+    --h1-color:                      var(--red);
+    --h2-color:                      var(--yellow);
+    --h3-color:                      var(--green);
+    --h4-color:                      var(--purple);
+    --h5-color:                      var(--frost0);
+    --h6-color:                      var(--frost2);
+
+    --text-highlight-bg:             var(--yellow);
+    --text-highlight-fg:             var(--dark0);
+
+    --text-accent:                   var(--orange);
+    --text-accent-hover:             var(--frost2);
+
+    --tag-color:                     var(--dark3);
+    --tag-background:                var(--light1);
+    --tag-background-hover:          var(--light0);
+
+    --titlebar-text-color-focused:   var(--red);
+
+    --inline-title-color:            var(--yellow);
+
+    --bold-color:                    var(--green);
+    --italic-color:                  var(--green);
+
+    --checkbox-color:                var(--frost2);
+    --checkbox-color-hover:          var(--frost2);
+    --checkbox-border-color:         var(--frost2);
+    --checkbox-border-color-hover:   var(--frost2);
+    --checklist-done-color:          rgba(var(--dark2_x), 0.4);
+
+    --table-header-background:       rgba(var(--light2_x), 0.2);
+    --table-header-background-hover: var(--frost2);
+    --table-row-even-background:     rgba(var(--light2_x), 0.4);
+    --table-row-odd-background:      rgba(var(--light2_x), 0.8);
+    --table-row-background-hover:    var(--frost2);
+
+    --text-selection:                rgba(var(--red_x), 0.6);
+    --flashing-background:           rgba(var(--red_x), 0.3);
+
+    --code-normal:                   var(--frost1);
+    --code-background:               var(--light2);
+
+    --mermaid-note:                  var(--frost0);
+    --mermaid-loopline:              var(--frost1);
+    --mermaid-exclude:               var(--light0);
+    --mermaid-seqnum:                var(--light0);
+
+    --icon-color-hover:              var(--red);
+    --icon-color-focused:            var(--frost3);
+
+    --nav-item-color-hover:          var(--red);
+    --nav-item-color-active:         var(--frost2);
+    --nav-file-tag:                  rgba(var(--orange_x), 0.9);
+
+    --graph-line:                    var(--light0);
+    --graph-node:                    var(--dark3);
+    --graph-node-tag:                var(--red);
+    --graph-node-attachment:         var(--green);
+
+    --calendar-hover:                var(--red);
+    --calendar-background-hover:     var(--light0);
+    --calendar-week:                 var(--orange);
+    --calendar-today:                var(--orange);
+
+    --dataview-key:                  var(--text-faint);
+    --dataview-key-background:       rgba(var(--frost2_x), 0.3);
+    --dataview-value:                var(--text-faint);
+    --dataview-value-background:     rgba(var(--red_x), 0.3);
+
+    --tab-text-color-focused-active:         var(--frost2);
+    --tab-text-color-focused-active-current: var(--red);
+}
+
+
+
+
+
+
+.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+	display: none;
+}
+
+svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.menu {
+	padding: var(--size-2-1);
+}
+
+.menu-item {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+
+
+
+
+
+/* ─────────────────────────────────────────────────── */
+/* Plugins */
+/* ─────────────────────────────────────────────────── */
+
+/* --------------- */
+/* Todoist */
+/* --------------- */
+
+/* JLO - Things has Checklist as a supported Community Plugin. I have _might_ provide support. */
+
+
+/* ---------------  */
+/* Checklist */
+/* --------------- */
+
+/* JLO - Things has Checklist as a supported Community Plugin. I have _might_ provide support. */
+
+
+/* ---------------  */
+/* Kanban */
+/* --------------- */
+
+/* JLO - Things has Kanban as a supported Community Plugin. I have no plans to provide support. */
+
+
+/* ─────────────────────────────────────────────────── */
+/* Styles Settings */
+/* ─────────────────────────────────────────────────── */
+
+/* JLO - Things has Styles Settings as a supported Community Plugin. I have no plans to provide support. */
+
+
+/* ─────────────────────────────────────────────────── */
+/* Plugin Compatibility info for the Obsidian Hub */
+/* ─────────────────────────────────────────────────── */
+
+/* JLO - Borrowed this idea from the Things theme. Placed at bottom of theme.css file. */
+/* JLO - I need to determine what the list _actually_ includes. */
+/* JLO - I notice that "templates" and "unique-note-creator" do not appear the 'standard' list. */
+
+/* @plugins
+core:
+- backlink
+- command-palette
+- daily-notes
+- file-explorer
+- file-recovery
+- global-search
+- graph
+- outgoing-link
+- outline
+- page-preview
+- publish
+- random-note
+- starred
+- switcher
+- sync
+- tag-pane
+- word-count
+community:
+- tasks
+*/
+
