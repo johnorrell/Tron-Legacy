@@ -20,8 +20,15 @@
 {
 	/* Define a set of standard, named colors. */
 	
-	--color-terminal-text:		#abebf4 ;	/* Terminal text at Flynn's console */
-	--color-terminal-text-rgb:	171,235,244 ;	/* Terminal text at Flynn's console */
+	--color-terminal-text:			#abebf4 ;	/* Terminal text at Flynn's console */
+	/* --color-terminal-text:			#a0f3ff ; */ /* Terminal text at Flynn's console, fully saturated */
+	/* --color-terminal-text-rgb:		171,235,244 ; */	/* Terminal text at Flynn's console */
+	--color-terminal-text-rgb:		160,243,255 ;	/* Terminal text at Flynn's console, fully saturated */
+
+	--color-terminal-background:		#030505 ;	/* Flynn's clean console 'on the grid' */
+	--color-terminal-background-dusty:	#0e0e07 ;	/* Flynn's dusty console */
+
+	--color-clu-helmet-game-grid:		#050505 ;	/* Clu's helmet talking to Sam before light-cycle battle */
 
 }
 
@@ -39,24 +46,26 @@ body
 	--slider-thumb-radius: 0px;
 }
 
+/* ───────────────────────────────────────────────────
 .theme-dark.clu, .theme-dark .clu
 {
 	color-scheme: dark-clu;
 
-	--background-primary:		#050505; /* #030505 Flynn's clean console 'on the grid' */ */ /* #0e0e07; Console screen Flynn's */ /* flu helmet in ages #050505; */ /* onyx #141414 */
+	--background-primary:		var(--color-terminal-background);
 	--background-primary-alt:	#36393f;
-	--background-secondary:		#050505;
+	--background-secondary:		var(--color-terminal-background);
 	--background-secondary-alt:	#222222;
 	--background-modifier-border:	#FF0000;
 }
+   ─────────────────────────────────────────────────── */
 
 .theme-dark
 {
 	color-scheme: dark;
 
-	--background-primary:		#050505; /* #030505 Flynn's clean console 'on the grid' */ */ /* #0e0e07; Console screen Flynn's */ /* flu helmet in ages #050505; */ /* onyx #141414 */
+	--background-primary:		var(--color-terminal-background);
 	--background-primary-alt:	#36393f;
-	--background-secondary:		#050505;
+	--background-secondary:		var(--color-terminal-background);
 	--background-secondary-alt:	#222222;
 	--background-modifier-border:	#FF0000;
 
@@ -67,6 +76,9 @@ body
 	--divider-color-hover:		rgba(231, 251, 249, 1.0);
 	--divider-width-hover:		2px;
 	/* --divider-vertical-height:	0px; */ /* Don't use this. */
+
+	/* --inline-title-color: rgba(171,235,244, 0.35); */
+	--inline-title-color: #aaaaaa;
 
     --titlebar-text-color-focused:   var(--red);
 
@@ -84,12 +96,25 @@ body
   --bold-color: rgb(158, 138, 255);
   --bold-weight: 700;
   --italic-color: rgb(158, 138, 255); /* JLO */
+
+
   --h1-color: rgba(var(--color-terminal-text-rgb), 1.00); /* JLO - Terminal text at Flynn's console */
-  --h2-color: rgba(var(--color-terminal-text-rgb), 0.95); /* JLO */
-  --h3-color: rgba(var(--color-terminal-text-rgb), 0.90); /* JLO */
-  --h4-color: rgba(var(--color-terminal-text-rgb), 0.85); /* JLO */
-  --h5-color: rgba(var(--color-terminal-text-rgb), 0.80); /* JLO */
-  --h6-color: rgba(var(--color-terminal-text-rgb), 0.75); /* JLO */
+  --h2-color: rgba(var(--color-terminal-text-rgb), 0.85); /* JLO */
+  --h3-color: rgba(var(--color-terminal-text-rgb), 0.70); /* JLO */
+  --h4-color: rgba(var(--color-terminal-text-rgb), 0.55); /* JLO */
+  --h5-color: rgba(var(--color-terminal-text-rgb), 0.40); /* JLO */
+  --h6-color: rgba(var(--color-terminal-text-rgb), 0.25); /* JLO */
+
+/* ───────────────────────────────────────────────────
+  --h1-color: rgb(161, 242, 254); /* JLO - Terminal text at Flynn's console */
+  --h2-color: rgb(163, 241, 252); /* JLO */
+  --h3-color: rgb(164, 240, 251); /* JLO */
+  --h4-color: rgb(166, 239, 249); /* JLO */
+  --h5-color: rgb(168, 237, 247); /* JLO */
+  --h6-color: rgb(169, 236, 246); /* JLO */
+   ─────────────────────────────────────────────────── */
+
+
   --inline-title-color: rgb(93, 188, 210); /* JLO */
   --link-color: rgb(35, 207, 253); /* JLO - Flynn's dinner drink (blue) */
   --link-external-color: rgb(143, 226, 242); /* JLO - Portal */
